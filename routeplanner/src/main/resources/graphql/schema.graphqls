@@ -1,0 +1,19 @@
+type Query {
+    _dummy: String
+}
+
+
+type User {
+	    id: ID!
+	    email: String!
+	    password: String!
+	}
+
+input CreateUserInput {
+    email: String!
+    password: String!
+}
+
+type Mutation {
+    createUser(input: CreateUserInput!): User
+}

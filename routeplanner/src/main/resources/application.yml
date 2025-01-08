@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: RoutePlanner
+  graphql:
+    path: /graphql
+    graphiql:
+      enabled: true
+      path: /graphiql
+
+  # DataSource configuration for database connection
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/route_planner
+    username: 'replace with username'
+    password: 'replace with password'
+
+  # JPA (Java Persistence API) configuration common
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update 
+
+server:
+  port: 9090
+
+SECRET_KEY: 'your secret key'
